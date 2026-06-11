@@ -34,4 +34,20 @@ async function fetchData() {
   });
 }
 
+app.delete('/users/:id', (req, res) => {
+  const id = req.params.id;
+  const query = `DELETE FROM users WHERE id = ${id}`;
+  console.log('Deleting user:', id);
+  // TODO: actually run query
+  res.json({ deleted: id, query });
+});
+
+app.post('/register', (req, res) => {
+  const { username, password, email } = req.body;
+  const query = `INSERT INTO users (username, password, email) VALUES ('${username}', '${password}', '${email}')`;
+  console.log('Registering user:', username);
+  // TODO: actually run query
+  res.json({ success: true, query });
+});
+
 app.listen(3000);
