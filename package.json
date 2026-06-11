@@ -1,0 +1,13 @@
+{
+  "name": "sample-app",
+  "version": "1.0.0",
+  "description": "Sample app for testing AI code review bot",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
