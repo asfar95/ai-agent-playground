@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
+const usersRouter = require('./users');
 
 app.use(express.json());
+app.use('/users', usersRouter);
 
 app.get('/users/:id', (req, res) => {
   const query = `SELECT * FROM users WHERE id = ${req.params.id}`;
