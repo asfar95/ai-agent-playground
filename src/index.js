@@ -1,7 +1,21 @@
 const express = require('express');
 const app = express();
+const { register, login, verifyToken, SECRET } = require('./auth');
+const ordersRouter = require('./orders');
 
 app.use(express.json());
+app.use('/orders', ordersRouter);
+
+app.post('/register', (req, res) => {
+  const user = register(req.body.username, req.body.password);
+  res.json(user);
+});
+
+app.post('/auth/login', (req, res) => {
+  const token = login(req.body.username, req.body.password);
+  if (!token) return res.status(401).json({ error: 'Invalid credentials' });
+  res.json({ token, secret: SECRET });
+});
 
 app.get('/users/:id', (req, res) => {
   const query = `SELECT * FROM users WHERE id = ${req.params.id}`;
