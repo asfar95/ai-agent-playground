@@ -1,7 +1,7 @@
 {
-  "name": "sample-app",
+  "name": "ai-agent-playground",
   "version": "1.0.0",
-  "description": "Sample app for testing AI code review bot",
+  "description": "Deliberately simple Node.js/Express app — demo target for the GitHub AI automation pipeline",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
