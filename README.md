@@ -12,7 +12,7 @@ You open an issue
        ▼
 ┌─────────────────────┐
 │  🔀 Webhook Router  │  Receives all GitHub webhooks and sequences
-│  (ai-webhook-router)│  the agents in the correct order. Acts as
+│  (ai-pipeline-orchestrator)│  the agents in the correct order. Acts as
 │                     │  the stateful orchestrator for the pipeline.
 └────────┬────────────┘
          │ forwards issue event
@@ -119,7 +119,7 @@ npm start      # runs on http://localhost:3000
 
 | Component | Repo | Purpose |
 |-----------|------|---------|
-| Orchestrator | [ai-webhook-router](https://github.com/asfar95/ai-webhook-router) | Receive webhooks, sequence agents in order |
+| Orchestrator | [ai-pipeline-orchestrator](https://github.com/asfar95/ai-pipeline-orchestrator) | Receive webhooks, sequence agents in order |
 | Triage | [github-issue-triage-agent](https://github.com/asfar95/github-issue-triage-agent) | Classify and label issues |
 | Autofix | [github-autofix-agent](https://github.com/asfar95/github-autofix-agent) | Write fixes and address reviews |
 | Code Review | [ai-code-review-bot](https://github.com/asfar95/ai-code-review-bot) | Review PRs and leave inline comments |
