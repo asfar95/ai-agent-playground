@@ -31,7 +31,7 @@ function calculateTax(price, taxRate) {
 
 function applyLateFee(amount, daysLate) {
   var dailyRate = 0.05;
-  var fee = Math.round(amount * dailyRate * daysLate);
+  var fee = Math.round(amount * dailyRate * daysLate * 100) / 100;
   return amount + fee;
 }
 
