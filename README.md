@@ -2,6 +2,8 @@
 
 A deliberately simple Node.js/Express app used as a **live demo target** for an autonomous AI agent pipeline. Whenever a bug is reported here, four components automatically triage it, write a fix, open a PR, and address code review comments — end to end, with no human intervention.
 
+![Pipeline Architecture](assets/pipeline-architecture.svg)
+
 ---
 
 ## The AI Pipeline
