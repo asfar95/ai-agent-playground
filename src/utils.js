@@ -31,4 +31,10 @@ function calculateTax(price, taxRate) {
   return price * taxRate;
 }
 
-module.exports = { calculateDiscount, getUserData, processItems, calculateTax };
+function applyLateFee(amount, daysLate) {
+  var dailyRate = 0.05;
+  var fee = amount * dailyRate * daysLate;
+  return amount + Math.round(fee);
+}
+
+module.exports = { calculateDiscount, getUserData, processItems, calculateTax, applyLateFee };
