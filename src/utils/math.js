@@ -12,7 +12,6 @@ function multiply(a, b) {
   return a * b;
 }
 
-// BUG: Math.abs strips the sign from the result
 function divide(a, b) {
   if (b === 0) throw new Error('Cannot divide by zero');
   return Math.abs(a / b);
